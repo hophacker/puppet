@@ -96,6 +96,7 @@ export interface MessagePayloadBase {
   text?         : string,
   timestamp     : number,       // Huan(202001): we support both seconds & milliseconds in Wechaty now.
   type          : MessageType,
+  quoteId?      : string,
 }
 
 /** @hidden */
@@ -160,6 +161,13 @@ export interface MessageQueryFilter {
   toId?   : string,
   type?   : MessageType,
 }
+
+interface MessageSendTextOptionsObject {
+  quoteId?: string,
+  mentionIdList?: string[]
+}
+
+export type MessageSendTextOptions = string[] | MessageSendTextOptionsObject
 
 /** @hidden */
 export type MessagePayloadFilterFunction = (payload: MessagePayload)    => boolean
