@@ -98,6 +98,11 @@ import type {
   ChannelPayload,
 } from './channel.js'
 
+import type {
+  CorpTagGroupPayload,
+  CorpTagPayload,
+} from './corpTag.js'
+
 import {
   sayablePayloads,
   sayableTypes,
@@ -177,5 +182,7 @@ export {
   type TapQueryFilter,
   type UrlLinkPayload,
   type ChannelPayload,
+  type CorpTagGroupPayload,
+  type CorpTagPayload,
   YOU,
 }

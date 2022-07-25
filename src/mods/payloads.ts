@@ -37,6 +37,8 @@ import type {
   UrlLinkPayload,
   SayablePayload,
   ChannelPayload,
+  CorpTagGroupPayload,
+  CorpTagPayload,
 }                           from '../schemas/mod.js'
 import {
   sayablePayloads,
@@ -83,6 +85,8 @@ export type {
   TapPayload                as Tap,
   UrlLinkPayload            as UrlLink,
   ChannelPayload            as Channel,
+  CorpTagGroupPayload       as CorpTagGroup,
+  CorpTagPayload            as CorpTag,
 }
 export {
   sayablePayloads as sayable, // Sayable payload creators
