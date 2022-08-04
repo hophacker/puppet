@@ -103,6 +103,7 @@ import {
   type TagPayload,
   type TagIdentifier,
   TagType,
+  TagEventType,
 } from './tag.js'
 
 import {
@@ -188,5 +189,6 @@ export {
   type TagGroupPayload,
   type TagPayload,
   type TagIdentifier,
+  type TagEventType,
   YOU,
 }
