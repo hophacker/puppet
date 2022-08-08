@@ -103,7 +103,6 @@ import type {
 import {
   type TagGroupPayload,
   type TagPayload,
-  type TagIdentifier,
   TagType,
   TagEventType,
   TagGroupEventType,
@@ -193,7 +192,6 @@ export {
   type ChannelPayload,
   type TagGroupPayload,
   type TagPayload,
-  type TagIdentifier,
   TagEventType,
   TagGroupEventType,
   YOU,
