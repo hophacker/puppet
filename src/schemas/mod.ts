@@ -103,7 +103,7 @@ import type {
 import {
   type TagGroupPayload,
   type TagPayload,
-  type TagQueryFilter.
+  type TagQueryFilter,
   type TagGroupQueryFilter,
   TagType,
   TagEventType,
