@@ -23,6 +23,7 @@ import type {
   EventTagPayload,
   EventTagGroupPayload,
   EventRoomAnnouncePayload,
+  EventVerifyCodePayload,
 }                                 from '../schemas/event.js'
 
 export type PuppetDirtyListener        = (payload: EventDirtyPayload)       => void | Promise<void>
@@ -46,6 +47,7 @@ export type PuppetRoomAnnounceListener = (payload: EventRoomAnnouncePayload)=> v
 export type PuppetScanListener         = (payload: EventScanPayload)        => void | Promise<void>
 export type PuppetTagListener          = (payload: EventTagPayload)         => void | Promise<void>
 export type PuppetTagGroupListener     = (payload: EventTagGroupPayload)    => void | Promise<void>
+export type PuppetVerifyCodeListener   = (payload: EventVerifyCodePayload)  => void | Promise<void>
 
 
 export type PuppetStartListener        = () => void | Promise<void>
@@ -75,6 +77,7 @@ interface PuppetEventListener {
   stop           : PuppetStopListener,
   tag            : PuppetTagListener,
   'tag-group'    : PuppetTagGroupListener,
+  'verify-code'  : PuppetVerifyCodeListener,
 }
 
 const PuppetEventEmitter = EventEmitter as unknown as new () =>
