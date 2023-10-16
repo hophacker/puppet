@@ -148,7 +148,7 @@ const roomMemberMixin = <MixinBase extends typeof PuppetSkeleton & ContactMixin>
       /**
         * 1. Try to get from cache
         */
-      const cachedPayload = this.cache.roomMember.get(roomId)
+      const cachedPayload = this.cache.roomMember?.get(roomId)
       const memberPayload = cachedPayload && cachedPayload[memberId]
 
       if (memberPayload) {
@@ -164,11 +164,13 @@ const roomMemberMixin = <MixinBase extends typeof PuppetSkeleton & ContactMixin>
       }
       const payload = await this.roomMemberRawPayloadParser(rawPayload)
 
-      this.cache.roomMember.set(roomId, {
-        ...cachedPayload,
-        memberId: payload,
-      })
-      log.silly('PuppetRoomMemberMixin', 'roomMemberPayload(%s) cache SET', roomId)
+      if (!this.cache.disabled) {
+        this.cache.roomMember.set(roomId, {
+          ...cachedPayload,
+          memberId: payload,
+        })
+        log.silly('PuppetRoomMemberMixin', 'roomMemberPayload(%s) cache SET', roomId)
+      }
 
       return payload
     }
