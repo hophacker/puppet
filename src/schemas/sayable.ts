@@ -113,6 +113,7 @@ type SayablePayloadUnsupportedType =
   | 'Unknown'
   | 'System'
   | 'CallRecord'
+  | 'AppRaw'
 
 export {
   sayablePayloads,
