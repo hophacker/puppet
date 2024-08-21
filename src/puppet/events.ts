@@ -49,7 +49,6 @@ export type PuppetTagListener          = (payload: EventTagPayload)         => v
 export type PuppetTagGroupListener     = (payload: EventTagGroupPayload)    => void | Promise<void>
 export type PuppetVerifyCodeListener   = (payload: EventVerifyCodePayload)  => void | Promise<void>
 
-
 export type PuppetStartListener        = () => void | Promise<void>
 export type PuppetStopListener         = () => void | Promise<void>
 
