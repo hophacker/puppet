@@ -285,6 +285,10 @@ class PuppetTest extends PUPPET.Puppet {
     return [] as any
   }
 
+  override timeline (): Promise<any> {
+    return [] as any
+  }
+
   /**
    * Tap
    */

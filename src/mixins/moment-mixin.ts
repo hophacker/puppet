@@ -34,6 +34,7 @@ const momentMixin = <MixinBase extends typeof PuppetSkeleton & PostMixin>(mixinB
      * @returns Array of contact ids
      */
     abstract momentVisibleList(): Promise<string[]>
+    abstract timeline(): Promise<any>
 
   }
 
